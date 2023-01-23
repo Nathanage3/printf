@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 /**
  * main - Entry point
  * Return: Always 0

@@ -5,13 +5,13 @@
  * @pa: list that contains the hexadecimal
  * Return: number.
  */
-
 int printhex(char *format, va_list pa)
 {
 	unsigned int num = va_arg(pa, unsigned int);
 	unsigned int num2;
 	int i, i2, copy, contame = 0;
 	char *numhex;
+
 	(void)format;
 
 	if (num == 0)
@@ -47,6 +47,7 @@ int printHEX(char *format, va_list pa)
 	unsigned int NUM2;
 	int I, I2, COPY, CONTAME = 0;
 	char *NUMHEX;
+
 	(void)format;
 
 	if (NUM == 0)
@@ -64,9 +65,9 @@ int printHEX(char *format, va_list pa)
 		else
 			NUMHEX[I] = COPY - 10 + 'A';
 		NUM = NUM / 16;
-		for (I2 = I - 1; I2 >= 0; I2--)
-			_putchar(NUMHEX[I2]);
-		free(NUMHEX);
-		return (CONTAME);
 	}
+	for (I2 = I - 1; I2 >= 0; I2--)
+		_putchar(NUMHEX[I2]);
+	free(NUMHEX);
+	return (CONTAME);
 }
