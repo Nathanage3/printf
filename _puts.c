@@ -1,20 +1,16 @@
 #include "main.h"
-
 /**
- * _puts - prints a string
- * new line, to stdout.
- * @string: input string
- * Return: count of string.
+ * _puts - print string
+ * @str: sring to be executed
  */
-int _puts(char *string)
-{
-	int contador = 0;
 
-	while (*string)
+void _puts(char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
 	{
-		_putchar(*string);
-		string++;
-		contador++;
+		putchar(str[i]);
+		i++;
 	}
-	return (contador);
 }
