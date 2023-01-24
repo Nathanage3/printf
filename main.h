@@ -3,8 +3,6 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
 /**
  * struct structprint - structure containing
  * @q: the location and method to translate data to characters.
