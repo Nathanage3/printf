@@ -1,0 +1,9 @@
+# -*- mode: gitignore; -*-
+*~
+<<<<<<< HEAD
+=======
+
+
+# main
+*-main.c
+>>>>>>> origin/master
