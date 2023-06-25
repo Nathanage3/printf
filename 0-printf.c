@@ -1,5 +1,14 @@
 #include "main.h"
 /**
+ * _putchar - putchar
+ * @c: char c
+ * Return: c
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+/**
  * _printf - operates as std printf
  *  @format: the koind of format specifiers passed to this function
  *  Return: The index count
