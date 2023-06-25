@@ -23,21 +23,16 @@ int _printf(const char *format, ...)
 	char *w;
 
 	va_start(args, format);
-
 	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
 			if (*format == '\0')
-			{
 				break;
-			}
 			else if (*format == '%')
-			{
-				_putchar('%');
-				k++;
-			}
+			{_putchar('%');
+				k++; }
 			else
 			{
 				switch (*format)
@@ -51,10 +46,11 @@ int _printf(const char *format, ...)
 						w = va_arg(args, char *);
 						while (*w != '\0')
 						{
+							if (*w == '\0')
+								return (0);
 							_putchar(*w);
 							w++;
-							k++;
-						}
+							k++; }
 						break;
 					default:
 						_putchar(format[-1]);
