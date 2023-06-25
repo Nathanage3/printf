@@ -46,8 +46,6 @@ int _printf(const char *format, ...)
 						w = va_arg(args, char *);
 						while (*w != '\0')
 						{
-							if (*w == '\0')
-								return (0);
 							_putchar(*w);
 							w++;
 							k++; }
