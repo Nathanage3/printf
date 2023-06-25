@@ -19,7 +19,8 @@ int _printf(const char *format, ...)
 			if (*format == '\0')
 				break;
 			else if (*format == '%')
-			{_putchar('%');
+			{
+				_putchar('%');
 				k++; }
 			else
 			{
@@ -34,9 +35,12 @@ int _printf(const char *format, ...)
 						w = va_arg(args, char *);
 						while (*w != '\0')
 						{
+							if (*w == '\0')
+								break;
 							_putchar(*w);
 							w++;
-							k++; }
+							k++;
+						}
 						break;
 					default:
 						_putchar(format[-1]);
