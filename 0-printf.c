@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
-#include <unistd.h>
 /**
  * _putchar - it works like std putchar
  * @c: the ascii value of chars
@@ -25,14 +23,20 @@ int _printf(const char *format, ...)
 	char *w;
 
 	va_start(args, format);
-	while (*format != '\0')
+
+	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
-			if (*format == '%')
+			if (format == '\0')
+			{
+				break;
+			}
+			else if (*format == '%')
 			{
 				_putchar('%');
+				k++;
 			}
 			else
 			{
