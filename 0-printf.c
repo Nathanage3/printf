@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 /**
  * _printf - operates as std printf
  *  @format: the kind of format specifiers passed to this function
