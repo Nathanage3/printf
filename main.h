@@ -16,5 +16,7 @@ int _printf_percent(va_list args);
 int _printf(const char *format, ...);
 int _print_b(va_list binary);
 int _print_u(va_list unsign);
+int _print_x(va_list *shexa);
+int _print_X(va_list lhexa);
 
 #endif
