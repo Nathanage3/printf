@@ -1,1 +1,1 @@
-Group project of two
+Group project to be done in two
