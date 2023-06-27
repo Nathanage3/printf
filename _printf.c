@@ -6,8 +6,9 @@
  */
 int _printf(const char *format, ...)
 {
-	const char *f_specifiers[] = {"%s", "%%", "%c", "%u", "%b", "%x", "%X"};
-	int (*conversion_f[])(va_list) = {_printf_s, _printf_percent, _printf_c, _print_u, _print_b, _print_x, _print_X};
+	const char *f_specifiers[] = {"%s", "%%", "%c"};
+	int (*conversion_f[])(va_list) = {_printf_s, _printf_percent,
+	_printf_c};
 	va_list args;
 	int f_index = 0, _size_f, length = 0, after_perc = 0, is_match = 0;
 
@@ -19,18 +20,15 @@ int _printf(const char *format, ...)
 		_size_f = (sizeof(f_specifiers) / sizeof(f_specifiers[0])) - 1;
 		is_match = 0;
 		while (_size_f >= 0)
-		{
-			after_perc = 0;
+		{after_perc = 0;
 			while (f_specifiers[_size_f][after_perc] != '\0' &&
-					f_specifiers[_size_f][after_perc] == format[f_index + after_perc])
+			f_specifiers[_size_f][after_perc] == format[f_index + after_perc])
 			{after_perc++; }
 			if (f_specifiers[_size_f][after_perc] == '\0')
-			{
-				length += conversion_f[_size_f](args);
+			{length += conversion_f[_size_f](args);
 				f_index += after_perc;
 				is_match = 1;
-				break;
-			}
+				break; }
 			_size_f--;
 		}
 		if (!is_match)
