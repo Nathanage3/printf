@@ -1,1 +1,1 @@
-A group project on printf
+This is a team project on printf
