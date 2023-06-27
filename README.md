@@ -1,1 +1,1 @@
-Group project on printf to be done in a group
+Group project on printf to be done in a group of two
