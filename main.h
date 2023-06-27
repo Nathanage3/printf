@@ -15,5 +15,6 @@ int _putchar(char c);
 int _printf_c(va_list ch);
 int _printf_percent(va_list args);
 int _printf(const char *format, ...);
+void change_to_b(int pdec);
 
 #endif
