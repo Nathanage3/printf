@@ -6,8 +6,8 @@
  */
 int _printf(const char *format, ...)
 {
-	const char *f_specifiers[] = {"%s", "%%", "%c", "%u", "%b"};
-	int (*conversion_f[])(va_list) = {_printf_s, _printf_percent, _printf_c, _print_u, _print_b};
+	const char *f_specifiers[] = {"%s", "%%", "%c", "%u", "%b", "%x", "%X"};
+	int (*conversion_f[])(va_list) = {_printf_s, _printf_percent, _printf_c, _print_u, _print_b, _print_x, _print_X};
 	va_list args;
 	int f_index = 0, _size_f, length = 0, after_perc = 0, is_match = 0;
 
