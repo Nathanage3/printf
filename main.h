@@ -17,5 +17,7 @@ int _printf(const char *format, ...);
 int _print_b(va_list binary);
 int _printf_d(va_list int_dec);
 int print_num(int y);
+int _printf_o(va_list arg);
+int _printf_r(va_list _str);
 
 #endif
