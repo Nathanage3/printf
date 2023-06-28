@@ -6,9 +6,9 @@
  */
 int _printf(const char *format, ...)
 {
-	const char *f_specifiers[] = {"%s", "%%", "%c"};
-	int (*conversion_f[])(va_list) = {_printf_s, _printf_percent,
-	_printf_c};
+	const char *f_specifiers[] = {"%c", "%s", "%%", "%d", "%i"};
+	int (*conversion_f[])(va_list) = {_printf_c, _printf_s, _printf_percent,
+	_printf_d, _printf_d};
 	va_list args;
 	int f_index = 0, _size_f, length = 0, after_perc = 0, is_match = 0;
 

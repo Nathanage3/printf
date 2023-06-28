@@ -15,7 +15,7 @@ int _printf_c(va_list ch);
 int _printf_percent(va_list args);
 int _printf(const char *format, ...);
 int _print_b(va_list binary);
-int _printf_di(va_list decimal);
-int print_num(int num);
+int _printf_d(va_list int_dec);
+int print_num(int y);
 
 #endif
